@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futuristic Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">TANVIR</div>
+        <nav id="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="skills.html">Skills</a>
+            <a href="achievements.html">Achievements</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-image">
+                <div class="image-container">
+                    <img src="images/tanvir.jpg" alt="MD. TANVIR AHMED SIDDIQUE" class="hero-photo">
+                    <div class="image-overlay"></div>
+                </div>
+            </div>
+            <div class="hero-text">
+                <div class="name-container">
+                    <h1>MD. TANVIR AHMED SIDDIQUE</h1>
+                </div>
+                <div class="hero-tags">
+                    <span class="tag">CSE Undergraduate</span>
+                    <span class="tag">Competitive Programmer</span>
+                    <span class="tag">Problem Solver</span>
+                    <span class="tag">ML Enthusiast</span>
+                    <span class="tag">Research Apprentice</span>
+                </div>
+                <div class="career-objective">
+                    <p>Go where the Universe takes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="neon-divider"></div>
+
+    <section id="highlights" class="content-section">
+        <div class="section-title">Highlights</div>
+        <div class="highlights">
+            <div class="highlight-card">
+                <div class="highlight-title">Edge Training Program</div>
+                <div class="highlight-desc">Received a certificate in Machine Learning under the Edge Training Program, deepening my understanding of modern AI techniques.</div>
+            </div>
+            <div class="highlight-card">
+                <div class="highlight-title">DUET IUPC 2024</div>
+                <div class="highlight-desc">Achieved 46th position in the highly competitive DUET Inter University Programming Contest, showcasing strong algorithmic skills.</div>
+            </div>
+            <div class="highlight-card">
+                <div class="highlight-title">Academic Excellence</div>
+                <div class="highlight-desc">Currently maintaining a strong academic record with a CGPA of 3.92, reflecting dedication and consistent performance.</div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        Thank you for visiting my Portfolio! &copy; 2025 MD. Tanvir Ahmed Siddique. All rights reserved.
+    </footer>
+
+    <script>
+        // Hamburger Menu Toggle
+        const navToggle = document.querySelector('.nav-toggle');
+        const navbar = document.getElementById('navbar');
+
+        if (navToggle && navbar) {
+            navToggle.addEventListener('click', () => {
+                navbar.classList.toggle('nav-open');
+                navToggle.classList.toggle('open');
+            });
+
+            navbar.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (navbar.classList.contains('nav-open')) {
+                        navbar.classList.remove('nav-open');
+                        navToggle.classList.remove('open');
+                    }
+                });
+            });
+        }
+    </script>
+</body>
+</html>
