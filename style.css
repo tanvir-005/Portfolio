@@ -1,15 +1,15 @@
 /* === Color Palette === */
 :root {
-    --primary: #b0fff6; /* Your original primary color */
-    --secondary: #181828; /* Your original secondary background */
-    --accent: #b0fff6; /* Accent now matches primary */
+    --primary: #b0fff6; 
+    --secondary: #181828; 
+    --accent: #b0fff6; 
     --text: #e0e0e0;
     --card-bg: #23234b;
     --heading-white: #ffffff;
-    --button-gradient: linear-gradient(90deg, #00bfae 0%, #3a3aff 100%); /* Blue/Teal gradient */
-    --button-hover-bg: linear-gradient(90deg, #b0fff6 0%, #7ee6f7 100%); /* Primary-based hover */
+    --button-gradient: linear-gradient(90deg, #00bfae 0%, #3a3aff 100%); 
+    --button-hover-bg: linear-gradient(90deg, #b0fff6 0%, #7ee6f7 100%); 
     --divider: #2d2d4d;
-    --dark-bg: #181828; /* Matches secondary */
+    --dark-bg: #181828; 
 }
 
 /* === Base Styles === */
@@ -17,7 +17,9 @@ body {
     margin: 0;
     background: var(--secondary);
     color: var(--text);
-    font-family: 'Roboto Mono', monospace;
+    /* font-family: 'Roboto Mono', monospace; */
+    font-family: Tahoma;
+    letter-spacing: 0.1em;
     min-height: 100vh;
     overflow-x: hidden;
     font-size: 1rem;
@@ -47,7 +49,7 @@ header {
 }
 
 .logo {
-    font-family: 'Roboto Slab';
+    /* font-family: 'Roboto Slab'; */
     font-size: 1.8rem;
     color: var(--primary);
     letter-spacing: 2px;
@@ -274,7 +276,7 @@ nav a:hover::after {
 }
 
 .hero-text h1 {
-    font-family: 'Roboto Slab';
+    /* font-family: 'Roboto Slab'; */
     font-size: 3rem;
     color: var(--heading-white);
     margin-bottom: 0.4rem;
@@ -364,7 +366,7 @@ nav a:hover::after {
     margin: 0 0 0.5rem 0;
     font-size: 1.3rem;
     color: var(--primary);
-    font-family: 'Roboto Slab';
+    /* font-family: 'Roboto Slab'; */
     font-weight: normal;
 }
 
@@ -383,7 +385,7 @@ nav a:hover::after {
     border-radius: 6px;
     background: var(--button-gradient);
     color: var(--dark-bg);
-    font-family: 'Roboto Slab';
+    /* font-family: 'Roboto Slab'; */
     font-weight: normal;
     text-decoration: none;
     transition: all 0.3s ease;
@@ -495,7 +497,7 @@ nav a:hover::after {
 
 /* === Section Titles === */
 .section-title {
-    font-family: 'Roboto Slab';
+    /* font-family: 'Roboto Slab'; */
     font-size: 2.2rem;
     color: var(--heading-white);
     text-align: center;
@@ -559,7 +561,7 @@ nav a:hover::after {
 }
 
 .highlight-title {
-    font-family: 'Roboto Slab';
+    /* font-family: 'Roboto Slab'; */
     font-size: 1.4rem;
     color: var(--primary);
     margin-bottom: 1.2rem;
@@ -583,7 +585,7 @@ nav a:hover::after {
 }
 
 .highlight-subtitle {
-    font-family: 'Roboto Mono';
+    /* font-family: 'Roboto Mono'; */
     font-size: 1.1rem;
     color: #7ee6f7;
     margin-bottom: 1.5rem;
