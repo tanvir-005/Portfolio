@@ -205,7 +205,7 @@ nav a:hover::after {
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(circle at center, rgba(176, 255, 246, 0.1) 0%, transparent 70%);
+    background: radial-gradient(circle at center, rgba(33, 38, 87, 0.712) 0%, transparent 70%);
     z-index: -1;
     animation: none;
 }
@@ -258,7 +258,7 @@ nav a:hover::after {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(45deg, rgba(176, 255, 246, 0.2), transparent);
+    background: linear-gradient(45deg, rgba(3, 111, 252, 0.219), transparent);
     opacity: 0;
     transition: opacity 0.4s ease;
 }
