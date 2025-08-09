@@ -1,13 +1,27 @@
-
-
 [
     {
         "title": "Academic Excellence",
-        "desc": "Currently maintaining a strong academic record with a CGPA of 3.92, reflecting dedication and consistent performance."
+        "desc": "Currently maintaining a strong academic record with a CGPA of 3.92, on the scale of 4, reflecting dedication and consistent performance."
     },
     {
         "title": "Problem Setter – Programming Contest",
         "desc": "Worked as a problem setter in the IUBAT Monthly Programming Contest – July 2025, organized by the Department of CSE, IUBAT."
+    },
+    {
+        "title": "International Collegiate Programming Contest (ICPC) – Participation",
+        "desc": "Qualified for ICPC regional rounds, and ranked 64th."
+    },
+    {
+        "title": "Manager, Programming Club, IUBAT IT Society",
+        "desc": "Volunteered as the Manager of the Programming Club to facilitate the programmers in my 4th year of BSc."
+    },
+    {
+        "title": "Trainer – Problem Solving & Programming Sessions",
+        "desc": "Volunteered as a trainer for Problem Solving sessions (Basic & Intermediate) in several semesters."
+    },
+    {
+        "title": "Edge Training Program – Machine Learning",
+        "desc": "Completed a Machine Learning course under the Edge Training Program, enhancing foundational and practical knowledge in AI."
     },
     {
         "title": "DUET IUPC 2025 – Participant",
@@ -28,22 +42,6 @@
     {
         "title": "National Collegiate Programming Contest (NCPC) – Participant",
         "desc": "Participated in JU NCPC 2024 and placed 136th nationally."
-    },
-    {
-        "title": "International Collegiate Programming Contest (ICPC) – Participant",
-        "desc": "Qualified for ICPC regional rounds, and ranked 64th."
-    },
-    {
-        "title": "Trainer – Problem Solving & Programming Sessions",
-        "desc": "Volunteered as a trainer for Problem Solving sessions (Basic & Intermediate) in several semesters."
-    },
-    {
-        "title": "Edge Training Program – Machine Learning",
-        "desc": "Completed a Machine Learning course under the Edge Training Program, enhancing foundational and practical knowledge in AI."
-    },
-    {
-        "title": "Manager, Programming Club, IUBAT IT Society",
-        "desc": "Volunteered as the Manager of the Programming Club to facilitate the programmers in my 4th year of BSc."
     },
     {
         "title": "NULL", "desc": "NULL",

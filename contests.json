@@ -1,0 +1,98 @@
+[
+    {
+        "imgSrc": "images/UU_IUPC.jpeg",
+        "imgAlt": "Uttara University IUPC 2025",
+        "title": "Uttara University IUPC 2025",
+        "subtitle": "Secured 68th place.",
+        "desc": "IUBAT_Paracetamol",
+        "link": "https://toph.co/c/uttara-university-inter-university-2025/standings"
+    },
+    {
+        "imgSrc": "images/BOI_IUBAT.jpg",
+        "imgAlt": "Battle of Intellects - Spring 2025 - IUBAT",
+        "title": "Battle of Intellects - Spring 2025 - IUBAT",
+        "subtitle": "Achieved 4th place.",
+        "desc": "Individual Contest",
+        "link": "https://toph.co/contests/training/eq2nk3p/standings"
+    },
+    {
+        "imgSrc": "images/DUET_IUPC.jpg",
+        "imgAlt": "DUET IUPC 2025",
+        "title": "DUET IUPC 2025",
+        "subtitle": "Ranked 46th with 5 solves.",
+        "desc": "IUBAT_enCRYpted",
+        "link": "https://toph.co/c/duet-inter-university-iupc-2025/standings"
+    },
+    {
+        "imgSrc": "images/KUET_IUPC.jpg",
+        "imgAlt": "KUET IUPC 2025",
+        "title": "KUET IUPC 2025",
+        "subtitle": "Finished 113th.",
+        "desc": "IUBAT_Supernova",
+        "link": "https://bapsoj.org/contests/miaki-presents-kuet-iupc-onsite-2025/standings"
+    },
+    {
+        "imgSrc": "images/DIU_ICPC.jpg",
+        "imgAlt": "ICPC Dhaka Regional 2024",
+        "title": "ICPC 2024",
+        "subtitle": "63rd in Dhaka Regional.",
+        "desc": "IUBAT_LivingThings",
+        "link": "https://bapsoj.org/contests/icpc-asia-dhaka-regional-contest-2024-onsite-round/standings"
+    },
+    {
+        "imgSrc": "images/BUET_IUPC.JPG",
+        "imgAlt": "BUET CSE Fest 2024",
+        "title": "BUET CSE Fest IUPC 2024",
+        "subtitle": "Placed 52nd.",
+        "desc": "IUBAT_LivingThings",
+        "link": "https://toph.co/c/inter-university-buet-cse-fest-2024/standings"
+    },
+    {
+        "imgSrc": "images/notfound.jpg",
+        "imgAlt": "IUT 11th National ICT Fest IUPC 2024",
+        "title": "IUT 11th National ICT Fest IUPC 2024",
+        "subtitle": "Ranked 29th.",
+        "desc": "IUBAT_eL3ctr0ns",
+        "link": "https://toph.co/c/iut-11th-national-ict-fest-2024/standings"
+    },
+    {
+        "imgSrc": "images/JU_NCPC.jpg",
+        "imgAlt": "NCPC 2023 (Hosted by JU)",
+        "title": "NCPC 2023 (Hosted by JU)",
+        "subtitle": "Finished 136th.",
+        "desc": "IUBAT_Assassins",
+        "link": "https://bapsoj.org/contests/ncpc-onsite-2023-hosted-by-ju/standings"
+    },
+    {
+        "imgSrc": "images/UAP_Junior.jpg",
+        "imgAlt": "UAP Inter-University Collaborative 1.0 (Junior)",
+        "title": "UAP Collaborative 1.0 (Junior)",
+        "subtitle": "Took 7th place.",
+        "desc": "IUBAT_enCRYpted",
+        "link": "https://toph.co/c/uap-inter-university-collaborative-1-0-junior/standings"
+    },
+    {
+        "imgSrc": "images/Monthly.jpg",
+        "imgAlt": "IUBAT Monthly Programming Contest",
+        "title": "IUBAT Monthly Contest",
+        "subtitle": "2nd place finish.",
+        "desc": "Individual Contest",
+        "link": "https://toph.co/contests/training/auynaxz/standings"
+    },
+    {
+        "imgSrc": "images/IUBAT_Collaborative.png",
+        "imgAlt": "Collaborative Programming Contest (IUBAT)",
+        "title": "Collaborative Contest (IUBAT)",
+        "subtitle": "Ended 19th.",
+        "desc": "IUBAT_enCRYpted",
+        "link": "https://toph.co/contests/training/b3lljkz/standings"
+    },
+    {
+        "imgSrc": "images/Goodbye2022.jpg",
+        "imgAlt": "Good Bye 2022 - IUBAT Standings",
+        "title": "Good Bye 2022 - IUBAT",
+        "subtitle": "Placed 19th.",
+        "desc": "Individual Contest",
+        "link": "https://toph.co/contests/training/7388376/standings"
+    }
+]

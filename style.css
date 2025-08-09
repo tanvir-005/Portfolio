@@ -2,7 +2,7 @@
 :root {
     --primary: #b0fff6; 
     --secondary: #181828; 
-    --accent: #b0fff6; 
+    --accent: #5bbcfd; 
     --text: #e0e0e0;
     --card-bg: #23234b;
     --heading-white: #ffffff;
@@ -54,6 +54,23 @@ header {
     color: var(--primary);
     letter-spacing: 2px;
 }
+
+.name {
+    color: var(--text);
+    text-decoration: none;
+    font-family: 'Tahoma';
+    font-weight: 1000;
+    /* transition: all 0.3s ease; */
+}
+
+.name:hover {
+    background-image: linear-gradient(120deg, var(--primary ), var(--text));
+    background-clip: text;
+    -webkit-background-clip: text; /* for Chrome/Safari */
+    color: transparent;
+    -webkit-text-fill-color: transparent; /* for Chrome/Safari */
+}
+
 
 nav a {
     color: var(--primary);
@@ -550,11 +567,11 @@ nav a:hover::after {
     transition: transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
-.highlight-card:hover {
+/* .highlight-card:hover {
     transform: translateY(-8px) scale(1.02);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
     border-color: var(--primary);
-}
+} */
 
 .highlight-card:hover::before {
     transform: translateX(100%) skewX(-30deg);
@@ -705,10 +722,10 @@ footer {
     transition: transform 0.2s;
 }
 
-.highlight-card.big-card:hover {
+/* .highlight-card.big-card:hover {
     transform: translateY(-6px) scale(1.03);
     box-shadow: 0 8px 32px rgba(0,0,0,0.22);
-}
+} */
 
 .card-img-container {
     flex: 0 0 420px; /* wider image area */

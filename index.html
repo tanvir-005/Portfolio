@@ -9,9 +9,9 @@
 </head>
 <body>
     <header>
-        <div class="logo"><a href="index.html" style="color:inherit;text-decoration:none;">TANVIR AHMED</a></div>
+        <div class="logo"><a href="index.html" class="name">TANVIR AHMED</a></div>
         <nav id="navbar">
-            <a>Download CV</a>
+            <a href="CV/CV_Tanvir_Ahmed.pdf" download="">Resume</a>
             <a href="cp.html">Competitive Programming</a>
             <a>Academic</a>
             <a>Skills</a>
@@ -88,16 +88,19 @@
             .then(data => {
                 const container = document.getElementById('highlights-container');
                 if (!container) return;
-                container.innerHTML = data.map(item => `
-                    <div class="highlight-card">
-                        <div class="highlight-title">${item.title}</div>
-                        <div class="highlight-desc">${item.desc}</div>
-                    </div>
-                `).join('');
+                container.innerHTML = data
+                    .slice(0, 6) // ✅ Take only the first 6 items
+                    .map(item => `
+                        <div class="highlight-card">
+                            <div class="highlight-title">${item.title}</div>
+                            <div class="highlight-desc">${item.desc}</div>
+                        </div>
+                    `).join('');
             })
             .catch(err => {
                 console.error('Failed to load highlights:', err);
             });
+
 
         // Fetch and render tags
         fetch('tags.json')

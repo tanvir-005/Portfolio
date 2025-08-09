@@ -6,6 +6,30 @@
     <title>Competitive Programming - Tanvir</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+
+    <!-- Internal CSS -->
+    <style>
+        .hero {
+            padding-top: 0;
+            padding-bottom: 0;
+            min-height: 40vh;
+        }
+
+        .hero-content.compact-hero {
+            padding: 0;
+        }
+
+        .hero-text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .career-objective p {
+            text-align: center;
+            margin: 0;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -37,38 +61,38 @@
 
     <section class="content-section">
         <div class="section-title">Contest Highlights</div>
-        <div class="highlights new-cards">
-            
-            <div class="highlight-card big-card">
-                <div class="card-img-container">
-                    <img src="images/DUET_IUPC.jpg" alt="DUET IUPC" class="card-img">
-                </div>
-                <div class="card-content">
-                    <div class="highlight-title">DUET IUPC</div>
-                    <div class="highlight-subtitle">IUBAT_enCRYpted</div>
-                    <div class="highlight-desc">
-                        Secured 46th position solving 5 problems.
-                    </div>
-                    <a href="https://toph.co/c/duet-inter-university-iupc-2025/standings/kiosk" class="card-proof-link" target="_blank" rel="noopener">See standings</a>
-                </div>
-            </div>
+        <div class="highlights new-cards" id="highlights-container">
 
-            <div class="highlight-card big-card">
-                <div class="card-img-container">
-                    <img src="images/DIU_ICPC.jpg" alt="ICPC 2024" class="card-img">
-                </div>
-                <div class="card-content">
-                    <div class="highlight-title">ICPC 2024</div>
-                    <div class="highlight-subtitle">IUBAT_LivingThings</div>
-                    <div class="highlight-desc">
-                        63rd position in ICPC 2024 Dhaka Regional.
-                    </div>
-                    <a href="https://toph.co/c/duet-inter-university-iupc-2025/standings/kiosk" class="card-proof-link" target="_blank" rel="noopener">See standings</a>
-                </div>
-            </div>
-            
         </div>
     </section>
+
+    <script>
+        fetch('contests.json')
+        .then(response => response.json())
+        .then(data => {
+            const container = document.getElementById('highlights-container');
+            if (!container) return;
+
+            container.innerHTML = data.map(item => `
+                <div class="highlight-card big-card">
+                    <div class="card-img-container">
+                        <img src="${item.imgSrc}" alt="${item.imgAlt}" class="card-img">
+                    </div>
+                    <div class="card-content">
+                        <div class="highlight-title">${item.title}</div>
+                        <div class="highlight-subtitle">${item.subtitle}</div>
+                        <div class="highlight-desc">
+                            ${item.desc}
+                        </div>
+                        <a href="${item.link}" class="card-proof-link" target="_blank" rel="noopener">See standings</a>
+                    </div>
+                </div>
+            `).join('');
+        })
+        .catch(err => {
+            console.error('Failed to load highlights:', err);
+        });
+    </script>
 
     <footer>
         Thank you for visiting my Portfolio! &copy; 2025 MD. Tanvir Ahmed Siddique. All rights reserved.
