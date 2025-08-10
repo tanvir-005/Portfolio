@@ -9,14 +9,15 @@
 </head>
 <body>
     <header>
-        <div class="logo"><a href="index.html" class="name">TANVIR AHMED</a></div>
+        <!-- <div class="logo"><a href="index.html" class="name">TANVIR AHMED</a></div> -->
         <nav id="navbar">
-            <a href="CV/CV_Tanvir_Ahmed.pdf" download="">Resume</a>
-            <a href="cp.html">Competitive Programming</a>
-            <a>Academic</a>
-            <a>Skills</a>
-            <a>Experiences</a>
-            <a>Contact</a>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="activities.html">Activities</a>
+            <a href="contests.html">Contests</a>
+            <a href="profiles.html">Profiles</a>
+            <a href="cv/CV_Tanvir_Ahmed.pdf" download="">Resume</a>
+            <a href="contact.html">Contact</a>
         </nav>
         <button class="nav-toggle" aria-label="Toggle navigation">
             <span></span>
@@ -83,7 +84,7 @@
         }
 
         // Fetch and render highlights
-        fetch('highlights.json')
+        fetch('json/highlights.json')
             .then(response => response.json())
             .then(data => {
                 const container = document.getElementById('highlights-container');
@@ -103,7 +104,7 @@
 
 
         // Fetch and render tags
-        fetch('tags.json')
+        fetch('json/tags.json')
             .then(response => response.json())
             .then(tags => {
                 const tagsContainer = document.getElementById('hero-tags');

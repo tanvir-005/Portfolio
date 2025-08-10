@@ -33,15 +33,21 @@
 </head>
 <body>
     <header>
-        <div class="logo"><a href="index.html" style="color:inherit;text-decoration:none;">TANVIR AHMED</a></div>
+        <!-- <div class="logo"><a href="index.html" style="color:inherit;text-decoration:none;">TANVIR AHMED</a></div> -->
         <nav id="navbar">
-            <a href="cv.pdf">Download CV</a>
-            <a href="cp.html">Competitive Programming</a>
-            <a href="academics.html">Academic</a>
-            <a href="skills.html">Skills</a>
-            <a href="experiences.html">Experiences</a>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="activities.html">Activities</a>
+            <a href="contests.html">Contests</a>
+            <a href="profiles.html">Profiles</a>
+            <a href="cv/CV_Tanvir_Ahmed.pdf" download="">Resume</a>
             <a href="contact.html">Contact</a>
         </nav>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </header>
 
     <section class="hero">
@@ -67,7 +73,29 @@
     </section>
 
     <script>
-        fetch('contests.json')
+
+        // Hamburger Menu Toggle
+        const navToggle = document.querySelector('.nav-toggle');
+        const navbar = document.getElementById('navbar');
+
+        if (navToggle && navbar) {
+            navToggle.addEventListener('click', () => {
+                navbar.classList.toggle('nav-open');
+                navToggle.classList.toggle('open');
+            });
+
+            navbar.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (navbar.classList.contains('nav-open')) {
+                        navbar.classList.remove('nav-open');
+                        navToggle.classList.remove('open');
+                    }
+                });
+            });
+        }
+
+        // contest information fetch and display
+        fetch('json/contests.json')
         .then(response => response.json())
         .then(data => {
             const container = document.getElementById('highlights-container');
