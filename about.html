@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Tanvir</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Compact hero similar to contests page */
+        .hero { padding-top: 0; padding-bottom: 0; min-height: 40vh; }
+        .hero-content.compact-hero { padding: 0; }
+        .hero-text { display: flex; flex-direction: column; align-items: center; }
+        .career-objective p { text-align: center; margin: 0; }
+    </style>
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="activities.html">Activities</a>
+            <a href="contests.html">Contests</a>
+            <a href="profiles.html">Profiles</a>
+            <a href="cv/CV_Tanvir_Ahmed.pdf" download>Resume</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content compact-hero">
+            <div class="hero-text">
+                <div class="name-container">
+                    <h1>About Me</h1>
+                </div>
+                <div class="career-objective">
+                    <p>Curious builder and competitive programmer with a growth mindset.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="neon-divider"></div>
+
+    <section class="content-section">
+        <div class="section-title">About</div>
+        <div class="highlights new-cards">
+            <div class="highlight-card big-card">
+                <div class="card-content">
+                    <div class="highlight-title">Who I Am</div>
+                    <div class="highlight-desc">
+                        <p>
+                            I am a CSE undergraduate with a strong focus on problem solving, algorithms, and learning by building.
+                            I enjoy transforming ideas into reliable solutions and constantly refining my approach through contests and projects.
+                        </p>
+                        <p>
+                            Outside academics, I contribute to the community through mentoring and problem setting, and I’m passionate about
+                            clean code, reproducible workflows, and sharing knowledge.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="section-title">Skills & Interests</div>
+        <div class="hero-tags" id="about-tags"></div>
+    </section>
+
+    <section class="content-section">
+        <div class="section-title">Certificates</div>
+        <div class="highlights">
+            <div class="highlight-card">
+                <div class="highlight-title">Machine Learning — Edge Training Program</div>
+                <div class="highlight-desc">
+                    Foundations of ML with hands-on exercises and practical problem solving.
+                </div>
+                <a href="certificates/ML.pdf" class="card-proof-link" target="_blank" rel="noopener">View certificate</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        Thank you for visiting my Portfolio! &copy; 2025 MD. Tanvir Ahmed Siddique. All rights reserved.
+    </footer>
+
+    <script>
+        // Hamburger Menu Toggle
+        const navToggle = document.querySelector('.nav-toggle');
+        const navbar = document.getElementById('navbar');
+        if (navToggle && navbar) {
+            navToggle.addEventListener('click', () => {
+                navbar.classList.toggle('nav-open');
+                navToggle.classList.toggle('open');
+            });
+            navbar.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (navbar.classList.contains('nav-open')) {
+                        navbar.classList.remove('nav-open');
+                        navToggle.classList.remove('open');
+                    }
+                });
+            });
+        }
+
+        // Fetch and render tags (reuse homepage tags)
+        fetch('json/tags.json')
+            .then(response => response.json())
+            .then(tags => {
+                const tagsContainer = document.getElementById('about-tags');
+                if (!tagsContainer) return;
+                tagsContainer.innerHTML = tags.map(tag => `<span class=\"tag\">${tag}</span>`).join('');
+            })
+            .catch(err => console.error('Failed to load tags:', err));
+    </script>
+</body>
+</html>
+
+
