@@ -9,10 +9,15 @@
 
     <style>
         /* Compact hero similar to contests page */
-        .hero { padding-top: 0; padding-bottom: 0; min-height: 40vh; }
+        .hero { padding-top: 0; padding-bottom: 0; min-height: 35vh; }
         .hero-content.compact-hero { padding: 0; }
         .hero-text { display: flex; flex-direction: column; align-items: center; }
+        .name-container h1 {margin: 0; }
+        .career-objective {margin: 0;}
         .career-objective p { text-align: center; margin: 0; }
+        #download{background-color: var(--primary); color: var(--dark-bg); font-weight: normal; padding: 2px 15px;border-radius: 4px;}
+        #download:hover{text-decoration: none; background-color: white;}
+        #download:hover::after{width: 0; height: 0; transition: none;}
     </style>
 </head>
 <body>
@@ -23,8 +28,8 @@
             <a href="activities.html">Activities</a>
             <a href="contests.html">Contests</a>
             <a href="profiles.html">Profiles</a>
-            <a href="cv/CV_Tanvir_Ahmed.pdf" download>Resume</a>
             <a href="contact.html">Contact</a>
+            <a id="download" href="cv/CV_Tanvir_Ahmed.pdf" download>CV</a>
         </nav>
         <button class="nav-toggle" aria-label="Toggle navigation">
             <span></span>
@@ -37,10 +42,10 @@
         <div class="hero-content compact-hero">
             <div class="hero-text">
                 <div class="name-container">
-                    <h1>About Me</h1>
+                    <h1>MD. TANVIR AHMED SIDDIQUE</h1>
                 </div>
                 <div class="career-objective">
-                    <p>Curious builder and competitive programmer with a growth mindset.</p>
+                    <p>Competitive programmer with a growth mindset.</p>
                 </div>
             </div>
         </div>
@@ -63,26 +68,20 @@
                             Outside academics, I contribute to the community through mentoring and problem setting, and I’m passionate about
                             clean code, reproducible workflows, and sharing knowledge.
                         </p>
+                        <p>
+                            I am a final-year Computer Science and Engineering student at the International University of Business Agriculture and Technology (IUBAT), with a strong passion for competitive programming, software development, and applied machine learning.
+                        </p>
+                        <p>
+                            I thrive in problem-solving environments, enjoy working on innovative projects, and actively engage in training and mentoring aspiring programmers.
+                        </p>
+                        <p>
+                            Beyond academics, I contribute to the Programming Club at IUBAT IT Society as a manager, trainer, and mentor, fostering a culture of learning and collaboration.
+                        </p>
+                        <p>
+                            When I’m not coding, you’ll find me exploring new technologies, improving my skills, or preparing for the next programming challenge.
+                        </p>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="content-section">
-        <div class="section-title">Skills & Interests</div>
-        <div class="hero-tags" id="about-tags"></div>
-    </section>
-
-    <section class="content-section">
-        <div class="section-title">Certificates</div>
-        <div class="highlights">
-            <div class="highlight-card">
-                <div class="highlight-title">Machine Learning — Edge Training Program</div>
-                <div class="highlight-desc">
-                    Foundations of ML with hands-on exercises and practical problem solving.
-                </div>
-                <a href="certificates/ML.pdf" class="card-proof-link" target="_blank" rel="noopener">View certificate</a>
             </div>
         </div>
     </section>
@@ -110,15 +109,6 @@
             });
         }
 
-        // Fetch and render tags (reuse homepage tags)
-        fetch('json/tags.json')
-            .then(response => response.json())
-            .then(tags => {
-                const tagsContainer = document.getElementById('about-tags');
-                if (!tagsContainer) return;
-                tagsContainer.innerHTML = tags.map(tag => `<span class=\"tag\">${tag}</span>`).join('');
-            })
-            .catch(err => console.error('Failed to load tags:', err));
     </script>
 </body>
 </html>

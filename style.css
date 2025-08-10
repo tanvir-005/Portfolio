@@ -719,7 +719,7 @@ footer {
     box-shadow: 0 4px 24px rgba(0,0,0,0.18);
     padding: 0;
     width: 900px; /* Fixed width for all cards */
-    min-height: 320px;
+    min-height: 200px;
     margin: 0 auto 36px auto; /* Center cards with auto margins */
     overflow: hidden;
     transition: transform 0.2s;

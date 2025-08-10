@@ -6,6 +6,11 @@
     <title>Portfolio: Tanvir</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <style>
+        #download{background-color: var(--primary); color: var(--dark-bg); font-weight: normal; padding: 2px 15px;border-radius: 4px;}
+        #download:hover{text-decoration: none; background-color: white;}
+        #download:hover::after{width: 0; height: 0; transition: none;}
+    </style>
 </head>
 <body>
     <header>
@@ -16,8 +21,8 @@
             <a href="activities.html">Activities</a>
             <a href="contests.html">Contests</a>
             <a href="profiles.html">Profiles</a>
-            <a href="cv/CV_Tanvir_Ahmed.pdf" download="">Resume</a>
             <a href="contact.html">Contact</a>
+            <a id="download" href="cv/CV_Tanvir_Ahmed.pdf" download>CV</a>
         </nav>
         <button class="nav-toggle" aria-label="Toggle navigation">
             <span></span>

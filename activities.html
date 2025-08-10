@@ -7,10 +7,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
-        .hero { padding-top: 0; padding-bottom: 0; min-height: 40vh; }
+        .hero { padding-top: 0; padding-bottom: 0; min-height: 35vh; }
         .hero-content.compact-hero { padding: 0; }
         .hero-text { display: flex; flex-direction: column; align-items: center; }
+        .name-container h1 {margin: 0; }
+        .career-objective {margin: 0;}
         .career-objective p { text-align: center; margin: 0; }
+        #download{background-color: var(--primary); color: var(--dark-bg); font-weight: normal; padding: 2px 15px;border-radius: 4px;}
+        #download:hover{text-decoration: none; background-color: white;}
+        #download:hover::after{width: 0; height: 0; transition: none;}
+        /* .card-content {padding: 0 50px; min-height: 200px; height: auto;} */
     </style>
 </head>
 <body>
@@ -21,8 +27,8 @@
             <a href="activities.html">Activities</a>
             <a href="contests.html">Contests</a>
             <a href="profiles.html">Profiles</a>
-            <a href="cv/CV_Tanvir_Ahmed.pdf" download>Resume</a>
             <a href="contact.html">Contact</a>
+            <a id="download" href="cv/CV_Tanvir_Ahmed.pdf" download>CV</a>
         </nav>
         <button class="nav-toggle" aria-label="Toggle navigation">
             <span></span>
