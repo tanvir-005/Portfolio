@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Competitive Programming - Tanvir</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Internal CSS -->
+    <style>
+        .hero { padding-top: 0; padding-bottom: 0; min-height: 35vh; }
+        .hero-content.compact-hero { padding: 0; }
+        .hero-text { display: flex; flex-direction: column; align-items: center; }
+        .name-container h1 {margin: 0; }
+        .career-objective {margin: 0;}
+        .career-objective p { text-align: center; margin: 0; }
+        #download{background-color: var(--primary); color: var(--dark-bg); font-weight: normal; padding: 2px 15px;border-radius: 4px;}
+        #download:hover{text-decoration: none; background-color: white;}
+        #download:hover::after{width: 0; height: 0; transition: none;}
+    </style>
+</head>
+<body>
+    <header>
+        <!-- <div class="logo"><a href="index.html" style="color:inherit;text-decoration:none;">TANVIR AHMED</a></div> -->
+        <nav id="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="activities.html">Activities</a>
+            <a href="contests.html">Contests</a>
+            <a href="profiles.html">Profiles</a>
+            <a href="contact.html">Contact</a>
+            <a id="download" href="cv/CV_Tanvir_Ahmed.pdf" download>CV</a>
+        </nav>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content compact-hero">
+            <div class="hero-text">
+                <div class="name-container">
+                    <h1>Competitive Programming</h1>
+                </div>
+                <div class="career-objective">
+                    <p>Passionate about solving algorithmic problems and participating in contests.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="neon-divider"></div>
+
+    <section class="content-section">
+        <div class="section-title">Contest Highlights</div>
+        <div class="highlights new-cards" id="highlights-container">
+
+        </div>
+    </section>
+
+    <script>
+
+        // Hamburger Menu Toggle
+        const navToggle = document.querySelector('.nav-toggle');
+        const navbar = document.getElementById('navbar');
+
+        if (navToggle && navbar) {
+            navToggle.addEventListener('click', () => {
+                navbar.classList.toggle('nav-open');
+                navToggle.classList.toggle('open');
+            });
+
+            navbar.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (navbar.classList.contains('nav-open')) {
+                        navbar.classList.remove('nav-open');
+                        navToggle.classList.remove('open');
+                    }
+                });
+            });
+        }
+
+        // contest information fetch and display
+        fetch('json/contests.json')
+        .then(response => response.json())
+        .then(data => {
+            const container = document.getElementById('highlights-container');
+            if (!container) return;
+
+            container.innerHTML = data.map(item => `
+                <div class="highlight-card big-card">
+                    <div class="card-img-container">
+                        <img src="${item.imgSrc}" alt="${item.imgAlt}" class="card-img">
+                    </div>
+                    <div class="card-content">
+                        <div class="highlight-title">${item.title}</div>
+                        <div class="highlight-subtitle">${item.subtitle}</div>
+                        <div class="highlight-desc">
+                            ${item.desc}
+                        </div>
+                        <a href="${item.link}" class="card-proof-link" target="_blank" rel="noopener">See standings</a>
+                    </div>
+                </div>
+            `).join('');
+        })
+        .catch(err => {
+            console.error('Failed to load highlights:', err);
+        });
+    </script>
+
+    <footer>
+        Thank you for visiting my Portfolio! &copy; 2025 MD. Tanvir Ahmed Siddique. All rights reserved.
+    </footer>
+</body>
+</html>
