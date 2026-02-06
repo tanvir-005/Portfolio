@@ -1,126 +1,565 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio: Tanvir</title>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <title>Tanvir Ahmed Siddique - Portfolio</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Devicon -->
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
     <style>
-        #download{background-color: var(--primary); color: var(--dark-bg); font-weight: normal; padding: 2px 15px;border-radius: 4px;}
-        #download:hover{text-decoration: none; background-color: white;}
-        #download:hover::after{width: 0; height: 0; transition: none;}
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+
+        /* Mobile menu fixes for specific requirement */
+        @media (max-width: 768px) {
+
+            /* Ensure all links are visible in mobile menu including 'more' items flattened */
+            .desktop-only {
+                display: none;
+            }
+
+            .mobile-only {
+                display: block;
+            }
+        }
     </style>
 </head>
+
 <body>
+
     <header>
-        <!-- <div class="logo"><a href="index.html" class="name">TANVIR AHMED</a></div> -->
-        <nav id="navbar">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="activities.html">Activities</a>
-            <a href="contests.html">Contests</a>
-            <a href="profiles.html">Profiles</a>
-            <a href="contact.html">Contact</a>
-            <a id="download" href="cv/CV_Tanvir_Ahmed.pdf" download>CV</a>
+        <nav>
+            <a href="#hero" class="logo">Tanvir Ahmed</a>
+            <!-- hamburger removed: desktop-only navbar -->
+            <ul class="nav-links">
+                <!-- First 5 visible -->
+                <li><a href="tanvir-ahmed-siddique-cv.pdf" download>CV</a></li>
+                <li><a href="#problem-solving">Problem Solving</a></li>
+                <li><a href="#competitive-programming">Competitive Programming</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+
+                <!-- More Dropdown -->
+                <li class="dropdown">
+                    <a href="#">More <i class="fa-solid fa-caret-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#education">Education</a></li>
+                        <li><a href="#certificates">Certificates</a></li>
+                        <li><a href="#extra-curricular">Extra-curricular</a></li>
+                        <!-- <li><a href="#experiences">Experiences</a></li> -->
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </li>
+            </ul>
         </nav>
-        <button class="nav-toggle" aria-label="Toggle navigation">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
     </header>
 
-    <section class="hero">
-        <div class="hero-content">
-            <div class="hero-image">
-                <div class="image-container">
-                    <img src="images/tanvir.jpg" alt="MD. TANVIR AHMED SIDDIQUE" class="hero-photo">
-                    <div class="image-overlay"></div>
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="container">
+            <img src="images/tanvir.png" alt="Profile Picture" class="profile-img">
+            <h1>MD. Tanvir Ahmed Siddique</h1>
+            <p class="subtitle">Competitive Programmer | CSE Graduate | ML Enthusiast</p>
+            <p class="summary">
+                Competitive Programmer and CSE Graduate with experiences of Participating 13 Onsite Programming Contest
+                to represent the university, have trained university juniors in Problem-Solving Sessions for more than
+                two years, Volunteered as a Mentor of the Course “Data Structures and Algorithms” and currently in the
+                responsibility of the Manager of the Programming Club of IUBAT IT Society, Department of CSE, IUBAT -
+                International University of Business Agriculture and Technology.
+            </p>
+            <a href="#contact" class="btn">Get In Touch</a>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+        <div class="container">
+            <h2>Education</h2>
+
+            <div class="edu-item">
+                <div class="edu-left">
+                    <h3>BSc. in Computer Science and Engineering</h3>
+                    <p>International University of Business Agriculture and Technology</p>
+                </div>
+                <div class="edu-right">
+                    <p>3.89 CGPA</p>
+                    <p>2022 - 2026</p>
                 </div>
             </div>
-            <div class="hero-text">
-                <div class="name-container">
-                    <h1>MD. TANVIR AHMED SIDDIQUE</h1>
+
+            <div class="edu-item">
+                <div class="edu-left">
+                    <h3>Higher Secondary Certificate (HSC)</h3>
+                    <p>Gazipur Metropolitan College</p>
                 </div>
-                <div class="hero-tags" id="hero-tags">
-                    <!-- Tags will be injected here -->
+                <div class="edu-right">
+                    <p>5.00* GPA</p>
+                    <p>2020</p>
                 </div>
-                <div class="career-objective">
-                    <h2 class="career-objective-title">Career Objective</h2>
-                    <p>Go where the Universe takes.</p>
+            </div>
+
+            <div class="edu-item">
+                <div class="edu-left">
+                    <h3>Secondary School Certificate (SSC)</h3>
+                    <p>Sharifpur Dakhil Madrasah</p>
+                </div>
+                <div class="edu-right">
+                    <p>5.00 GPA</p>
+                    <p>2017</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <div class="neon-divider"></div>
+    <!-- Problem Solving -->
+    <section id="problem-solving">
+        <div class="container">
+            <h2>Problem Solving</h2>
 
-    <section id="highlights" class="content-section">
-        <div class="section-title">Highlights</div>
-        <div class="highlights" id="highlights-container">
-            <!-- Highlight cards will be injected here -->
+            <div class="stats">
+                <div class="stat-item">
+                    <h3>Codeforces: twilighTTanvir</h3>
+                    <p>Max Rating: 1582 (Specialist)</p>
+                    <a href="https://codeforces.com/profile/twilighTTanvir" class="btn-small" target="_blank">Visit Profile <i
+                            class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+
+            <h3 class="subheading">Top 3 Performances (Codeforces)</h3>
+            <div class="global-rankings">
+                <div class="rank-card">
+                    <h4>Codeforces Round 1017 (Div. 4)</h4>
+                    <p>Global Rank: 649</p>
+                    <a href="https://codeforces.com/contest/2094/standings/participant/208401230#p208401230" class="btn-small" target="_blank">See Standings</a>
+                </div>
+                <div class="rank-card">
+                    <h4>Codeforces Round 1045 (Div. 2)</h4>
+                    <p>Global Rank: 835</p>
+                    <a href="https://codeforces.com/contest/2134/standings/participant/217766374#p217766374" class="btn-small" target="_blank">See Standings</a>
+                </div>
+                <div class="rank-card">
+                    <h4>Codeforces Round 1047 (Div. 3)</h4>
+                    <p>Global Rank: 839</p>
+                    <a href="https://codeforces.com/contest/2137/standings/participant/218402971#p218402971" class="btn-small" target="_blank">See Standings</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Competitive Programming -->
+    <section id="competitive-programming">
+        <div class="container">
+            <h2>Competitive Programming</h2>
+            <div class="cp-grid">
+                <div class="cp-card">
+                    <img src="https://placehold.co/600x400" alt="Contest 1" class="cp-img">
+                    <div class="cp-content">
+                        <h4>ICPC Dhaka Regional Site 2025</h4>
+                        <p>Team: IUBAT Eksho Eksho</p>
+                        <p>Rank: 62nd</p>
+                        <p>December, 2025</p>
+                        <a href="https://bapsoj.org/contests/icpc-dhaka-onsite-2025/standings" class="btn-small" target="_blank">See Standings</a>
+                    </div>
+                </div>
+
+                <div class="cp-card">
+                    <img src="https://placehold.co/600x400" alt="Contest 1" class="cp-img">
+                    <div class="cp-content">
+                        <h4>ICPC 2025 Preliminary</h4>
+                        <p>Team: IUBAT Eksho Eksho</p>
+                        <p>97th among 2100+ teams</p>
+                        <p>November, 2025</p>
+                        <a href="https://bapsoj.org/contests/icpc-dhaka-2025-online-preliminary/standings" class="btn-small" target="_blank">See Standings</a>
+                    </div>
+                </div>
+
+                <div class="cp-card">
+                    <img src="https://placehold.co/600x400" alt="Contest 1" class="cp-img">
+                    <div class="cp-content">
+                        <h4>CUET Inter University Programming Contest 2025</h4>
+                        <p>Team: IUBAT Eksho Eksho</p>
+                        <p>Rank: 35th</p>
+                        <p>November, 2025</p>
+                        <a href="https://toph.co/c/cuet-iupc-2025/standings" class="btn-small" target="_blank">See Standings</a>
+                    </div>
+                </div>
+
+                <div class="cp-card">
+                    <img src="https://placehold.co/600x400" alt="Contest 1" class="cp-img">
+                    <div class="cp-content">
+                        <h4>Inter University Programming Contest - MU CSE Fest 2025</h4>
+                        <p>Team: IUBAT Eksho Eksho</p>
+                        <p>Rank: 39th</p>
+                        <p>November, 2025</p>
+                        <a href="https://toph.co/c/inter-university-mu-cse-fest-2025/standings" class="btn-small" target="_blank">See Standings</a>
+                    </div>
+                </div>
+                
+                <div class="cp-card">
+                    <img src="https://placehold.co/600x400" alt="Contest 1" class="cp-img">
+                    <div class="cp-content">
+                        <h4>8th DRMC International Tech Carnival 2025 - Programming Contest - Main Round</h4>
+                        <p>Team: Tourists</p>
+                        <p>Rank: 19th</p>
+                        <p>October, 2025</p>
+                        <a href="https://toph.co/contests/training/z9wvv8k/standings" class="btn-small" target="_blank">See Standings</a>
+                    </div>
+                </div>
+                
+                <div class="cp-card">
+                    <img src="https://placehold.co/600x400" alt="Contest 1" class="cp-img">
+                    <div class="cp-content">
+                        <h4>Uttara University Inter-University Programming Contest 2025</h4>
+                        <p>Team: IUBAT Eksho Eksho</p>
+                        <p>Rank: 39th</p>
+                        <p>June, 2025</p>
+                        <a href="https://toph.co/c/uttara-university-inter-university-2025/standings" class="btn-small" target="_blank">See Standings</a>
+                    </div>
+                </div>
+
+                <div class="cp-card">
+                    <img src="https://placehold.co/600x400" alt="Contest 1" class="cp-img">
+                    <div class="cp-content">
+                        <h4>Battle of Intellects - Spring 2025 - IUBAT</h4>
+                        <p>Team: IUBAT Eksho Eksho</p>
+                        <p>Rank: 39th</p>
+                        <p>May, 2025</p>
+                        <a href="https://toph.co/contests/training/eq2nk3p/standings" class="btn-small" target="_blank">See Standings</a>
+                    </div>
+                </div>
+
+                <div class="cp-card">
+                    <img src="https://placehold.co/600x400" alt="Contest 1" class="cp-img">
+                    <div class="cp-content">
+                        <h4>Betopia Group Presents DUET Inter University Programming Contest 2025</h4>
+                        <p>Team: IUBAT Eksho Eksho</p>
+                        <p>Rank: 39th</p>
+                        <p>May, 2025</p>
+                        <a href="https://toph.co/c/duet-inter-university-iupc-2025/standings" class="btn-small" target="_blank">See Standings</a>
+                    </div>
+                </div>
+
+                <div class="cp-card">
+                    <img src="https://placehold.co/600x400" alt="Contest 1" class="cp-img">
+                    <div class="cp-content">
+                        <h4>MIAKI Presents KUET IUPC 2025</h4>
+                        <p>Team: IUBAT Eksho Eksho</p>
+                        <p>Rank: 39th</p>
+                        <p>January, 2025</p>
+                        <a href="https://bapsoj.org/contests/miaki-presents-kuet-iupc-onsite-2025/standings" class="btn-small" target="_blank">See Standings</a>
+                    </div>
+                </div>
+
+                <div class="cp-card">
+                    <img src="https://placehold.co/600x400" alt="Contest 1" class="cp-img">
+                    <div class="cp-content">
+                        <h4>ICPC Asia Dhaka Regional Contest 2024</h4>
+                        <p>Team: IUBAT Eksho Eksho</p>
+                        <p>Rank: 39th</p>
+                        <p>December, 2024</p>
+                        <a href="https://bapsoj.org/contests/icpc-asia-dhaka-regional-contest-2024-onsite-round/standings" class="btn-small" target="_blank">See Standings</a>
+                    </div>
+                </div>
+
+                <div class="cp-card">
+                    <img src="https://placehold.co/600x400" alt="Contest 1" class="cp-img">
+                    <div class="cp-content">
+                        <h4>BUET CSE Fest Inter-University Programming Contest 2024</h4>
+                        <p>Team: IUBAT Eksho Eksho</p>
+                        <p>Rank: 39th</p>
+                        <p>November, 2024</p>
+                        <a href="https://toph.co/c/inter-university-buet-cse-fest-2024/standings" class="btn-small" target="_blank">See Standings</a>
+                    </div>
+                </div>
+
+                <div class="cp-card">
+                    <img src="https://placehold.co/600x400" alt="Contest 1" class="cp-img">
+                    <div class="cp-content">
+                        <h4>IUT 11th National ICT Fest IUPC 2024</h4>
+                        <p>Team: IUBAT Eksho Eksho</p>
+                        <p>Rank: 39th</p>
+                        <p>April, 2024</p>
+                        <a href="https://toph.co/c/iut-11th-national-ict-fest-2024/standings" class="btn-small" target="_blank">See Standings</a>
+                    </div>
+                </div>
+
+                <div class="cp-card">
+                    <img src="https://placehold.co/600x400" alt="Contest 1" class="cp-img">
+                    <div class="cp-content">
+                        <h4>NCPC - National Collegiate Programming Contest 2023 (Hosted by JU)</h4>
+                        <p>Team: IUBAT Eksho Eksho</p>
+                        <p>Rank: 39th</p>
+                        <p>March, 2024</p>
+                        <a href="https://bapsoj.org/contests/ncpc-onsite-2023-hosted-by-ju/standings" class="btn-small" target="_blank">See Standings</a>
+                    </div>
+                </div>
+
+                <div class="cp-card">
+                    <img src="https://placehold.co/600x400" alt="Contest 1" class="cp-img">
+                    <div class="cp-content">
+                        <h4>UAP Inter-University Collaborative Programming Contest 1.0 (Junior)</h4>
+                        <p>Team: IUBAT Eksho Eksho</p>
+                        <p>Rank: 39th</p>
+                        <p>January, 2024</p>
+                        <a href="https://toph.co/c/uap-inter-university-collaborative-1-0-junior/standings" class="btn-small" target="_blank">See Standings</a>
+                    </div>
+                </div>
+
+                <div class="cp-card">
+                    <img src="https://placehold.co/600x400" alt="Contest 1" class="cp-img">
+                    <div class="cp-content">
+                        <h4>IUBAT Monthly Programming Contest (Intra-University Programming Contest)</h4>
+                        <p>Team: IUBAT Eksho Eksho</p>
+                        <p>Rank: 39th</p>
+                        <p>September, 2023</p>
+                        <a href="https://toph.co/contests/training/auynaxz/standings" class="btn-small" target="_blank">See Standings</a>
+                    </div>
+                </div>
+
+                <div class="cp-card">
+                    <img src="https://placehold.co/600x400" alt="Contest 1" class="cp-img">
+                    <div class="cp-content">
+                        <h4>Collaborative Programming Contest (IUBAT)</h4>
+                        <p>Team: IUBAT Eksho Eksho</p>
+                        <p>Rank: 39th</p>
+                        <p>July, 2023</p>
+                        <a href="https://toph.co/contests/training/b3lljkz/standings" class="btn-small" target="_blank">See Standings</a>
+                    </div>
+                </div>
+
+                <div class="cp-card">
+                    <img src="https://placehold.co/600x400" alt="Contest 1" class="cp-img">
+                    <div class="cp-content">
+                        <h4>Good Bye 2022 - IUBAT Standings</h4>
+                        <p>Team: IUBAT Eksho Eksho</p>
+                        <p>Rank: 39th</p>
+                        <p>November, 2022</p>
+                        <a href="https://toph.co/contests/training/b3lljkz/standings" class="btn-small" target="_blank">See Standings</a>
+                    </div>
+                </div>
+
+
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+        <div class="container">
+            <h2>Skills</h2>
+
+            <div class="skill-category">
+                <h3>Programming Languages</h3>
+                <div class="skill-list">
+                    <span class="skill-tag"><i class="devicon-c-plain"></i> C</span>
+                    <span class="skill-tag"><i class="devicon-cplusplus-plain"></i> C++</span>
+                    <span class="skill-tag"><i class="devicon-csharp-plain"></i> C#</span>
+                    <span class="skill-tag"><i class="devicon-java-plain"></i> Java</span>
+                    <span class="skill-tag"><i class="devicon-python-plain"></i> Python</span>
+                    <span class="skill-tag"><i class="devicon-javascript-plain"></i> JavaScript</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3>Environment & Tools</h3>
+                <div class="skill-list">
+                    <span class="skill-tag"><i class="fa-brands fa-windows"></i> Windows</span>
+                    <span class="skill-tag"><i class="fa-brands fa-linux"></i> Linux</span>
+                    <span class="skill-tag"><i class="fa-brands fa-git-alt"></i> Git</span>
+                    <span class="skill-tag"><i class="fa-brands fa-github"></i> GitHub</span>
+                    <span class="skill-tag"><i class="fa-solid fa-code"></i> Visual Studio</span>
+                    <span class="skill-tag"><i class="fa-solid fa-file-pdf"></i> LaTeX</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3>Frameworks</h3>
+                <div class="skill-list">
+                    <span class="skill-tag"><i class="fa-brands fa-microsoft"></i> ASP.NET MVC</span>
+                    <span class="skill-tag"><i class="fa-brands fa-bootstrap"></i> Bootstrap</span>
+                    <span class="skill-tag"><i class="fa-solid fa-wind"></i> Tailwind</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3>Expertise</h3>
+                <div class="skill-list">
+                    <span class="skill-tag"><i class="fa-solid fa-brain"></i> Data Structures & Algorithms</span>
+                    <span class="skill-tag"><i class="fa-solid fa-puzzle-piece"></i> Problem Solving</span>
+                    <span class="skill-tag"><i class="fa-solid fa-cube"></i> OOP</span>
+                    <span class="skill-tag"><i class="fa-solid fa-calculator"></i> Mathematics</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3>Languages</h3>
+                <div class="skill-list">
+                    <span class="skill-tag"><i class="fa-solid fa-language"></i> English</span>
+                    <span class="skill-tag"><i class="fa-solid fa-language"></i> Bangla</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Training & Certificates -->
+    <section id="certificates">
+        <div class="container">
+            <h2>Training & Certificates</h2>
+
+            <div class="cert-item">
+                <img src="images/Edge-ML-Certificate.jpg" alt="Cert 1" class="cert-img">
+                <div class="cert-details">
+                    <h3>Python with Machine Learning</h3>
+                    <p>Organizer: Department of Computer Science and Engineering (CSE), Jagannath University under Enhancing Digital Government and Economy (EDGE) Project of Bangladesh Computer Council, ICT Division</p>
+                    <p class="littlegap">Date: November 2024 - May 2025</p>
+                </div>
+            </div>
+
+            <div class="cert-item">
+                <img src="https://placehold.co/200x150" alt="Cert 2" class="cert-img">
+                <div class="cert-details">
+                    <h3>BUBT BAPS National Programming Camp 2025</h3>
+                    <p>Organizer: Bangladesh Association of Problem Setters (BAPS) in collaboration with Bangladesh University of Business and Technology (BUBT)</p>
+                    <p class="littlegap">Date: September 2025</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+        <div class="container">
+            <h2>Major Projects</h2>
+
+            <div class="project-card">
+                <h3>CodeKoro [An Online Code Judging System]</h3>
+                <div class="project-specs">ASP .NET MVC Core</div>
+                <p>Engineered a system to meet the requirements of the assignment of the course “Software Engineering” that will have problems to solve and judge the code solutions. The system provides platform to create programming problems, contests and environment to solve the problems, participate contests and judges the solutions.</p>
+                <br>
+                <a href="https://github.com/tanvir-005/CodeKoro" class="btn" target="_blank"><i class="fa-brands fa-github"></i>View on GitHub</a>
+            </div>
+            
+            <div class="project-card">
+                <h3>Linear Algebra 3x3 System Solver [A Program to Implement the Logics of Linear Algebra]</h3>
+                <div class="project-specs">C++</div>
+                <p>Coded the concept of solving a system of linear equations containing 3 variables that will take the system as input and calculate the values of the variables or determine the consistency of the system of linear equations.</p>
+                <br>
+                <a href="https://github.com/tanvir-005/LinearAlgebra-SystemSolve_3x3" class="btn" target="_blank"><i class="fa-brands fa-github"></i>View on GitHub</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Diabetic Retinopathy Classification [A Deep Learning Approach to Determine the Severity of Diabetic Retinopathy from Fundus Images]</h3>
+                <div class="project-specs">Python, Jupyter Notebook, Kaggle, Densenet121, NumPy, Pandas, TensorFlow, Matplotlib, Scikit-Learn</div>
+                <p>Preprocessed medical images (fundus images) and used Densenet121 to train a model that can 96% accurately classify diabetic retinopathy from fundus images with implementing the concepts of OOP to make the change of dataset or parameters convenient.</p>
+                <br>
+                <a href="https://github.com/tanvir-005/Diabetic-Retinopathy-Detection" class="btn" target="_blank"><i class="fa-brands fa-github"></i>View on GitHub</a>
+            </div>
+
+            <div class="project-card">
+                <h3>SpotLight [An Event Management System to Facilitate Organizers to Manage Events]</h3>
+                <div class="project-specs">C#, ASP .NET, HTML, CSS</div>
+                <p>Developed a system for the course “Visual Programming” following the concepts of MVC architecture. The system contains functionalities of Event Organizers and Participants to Create, Manage and Book Events digitally with authentication and role-based activities.</p>
+                <br>
+                <a href="https://github.com/tanvir-005/SpotLight" class="btn" target="_blank"><i class="fa-brands fa-github"></i>View on GitHub</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Library Management System [A System to Manage the works of a library]</h3>
+                <div class="project-specs">HTML, CSS, PHP, MySQL</div>
+                <p>Designed a system to meet the requirements of the course “System Analysis and Design” applying its principles which offers the functionalities of librarians with options of admin activities.</p>
+                <br>
+                <a href="https://github.com/tanvir-005/library_management" class="btn" target="_blank"><i class="fa-brands fa-github"></i>View on GitHub</a>
+            </div>
+
+            
+
+            
+        </div>
+    </section>
+
+    <!-- Experiences (Placeholder based on nav) -->
+    <!-- <section id="experiences">
+        <div class="container">
+            <h2>Experiences</h2>
+            <div class="activity-item">
+                <h3>Software Engineering Intern</h3>
+                <p><strong>ABC Inc.</strong> | Dhaka, Bangladesh</p>
+                <p><em>Jan 2069 - Present</em></p>
+                <p>Working on Lorem Ipsum with Dolor Sit Amet.</p>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Extra Curricular -->
+    <section id="extra-curricular">
+        <div class="container">
+            <h2>Extra Curricular Activities</h2>
+
+            <div class="activity-item">
+                <h3>Volunteer Coordinator</h3>
+                <p><strong>University Computer Club</strong></p>
+                <p><em>2022 - 2023</em></p>
+                <p>Organized various tech talks and coding competitions. Managed a team of 20 volunteers during the
+                    annual tech fest.</p>
+            </div>
+
+            <div class="activity-item">
+                <h3>General Secretary</h3>
+                <p><strong>Math Club</strong></p>
+                <p><em>2021 - 2022</em></p>
+                <p>Led weekly math workshops and problem-solving sessions for junior students.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <a href="mailto:tanvir.24633@gmail.com">tanvir.24633@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <a href="tel:+8801704476935">+88 01704-476935</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fa-brands fa-github"></i>
+                    <a href="https://github.com/tanvir-005" target="_blank">github.com/tanvir-005</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fa-brands fa-linkedin"></i>
+                    <a href="https://www.linkedin.com/in/tanvir-ahmed-siddique-/" target="_blank">linkedin.com/in/tanvir-ahmed-siddique-/</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fa-brands fa-facebook"></i>
+                    <a href="https://www.facebook.com/005tanvir/" target="_blank">facebook.com/005tanvir</a>
+                </div>
+            </div>
         </div>
     </section>
 
     <footer>
-        Thank you for visiting my Portfolio!
+        <div class="container" style="text-align: center; padding: 2rem 0; color: #888; font-size: 0.9rem;">
+            Go where the universe takes...
+        </div>
     </footer>
 
-    <script>
-        // Hamburger Menu Toggle
-        const navToggle = document.querySelector('.nav-toggle');
-        const navbar = document.getElementById('navbar');
-
-        if (navToggle && navbar) {
-            navToggle.addEventListener('click', () => {
-                navbar.classList.toggle('nav-open');
-                navToggle.classList.toggle('open');
-            });
-
-            navbar.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', () => {
-                    if (navbar.classList.contains('nav-open')) {
-                        navbar.classList.remove('nav-open');
-                        navToggle.classList.remove('open');
-                    }
-                });
-            });
-        }
-
-        // Fetch and render highlights
-        fetch('json/highlights.json')
-            .then(response => response.json())
-            .then(data => {
-                const container = document.getElementById('highlights-container');
-                if (!container) return;
-                container.innerHTML = data
-                    .slice(0, 6) // ✅ Take only the first 6 items
-                    .map(item => `
-                        <div class="highlight-card">
-                            <div class="highlight-title">${item.title}</div>
-                            <div class="highlight-desc">${item.desc}</div>
-                        </div>
-                    `).join('');
-            })
-            .catch(err => {
-                console.error('Failed to load highlights:', err);
-            });
-
-
-        // Fetch and render tags
-        fetch('json/tags.json')
-            .then(response => response.json())
-            .then(tags => {
-                const tagsContainer = document.getElementById('hero-tags');
-                if (!tagsContainer) return;
-                tagsContainer.innerHTML = tags.map(tag =>
-                    `<span class="tag">${tag}</span>`
-                ).join('');
-            })
-            .catch(err => {
-                console.error('Failed to load tags:', err);
-            });
-    </script>
+    <script src="script.js"></script>
 </body>
+
 </html>
